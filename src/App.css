@@ -1,0 +1,38 @@
+.app-container {
+  padding: 0 7rem 2rem 7rem;
+}
+
+.header-section {
+  position: sticky;
+  top: 0;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+  z-index: 99;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+}
+
+.content-section {
+}
+
+.page-content {
+  height: 100vh;
+  max-width: 100%;
+  color: white;
+
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bi-plus-lg::before {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out;
+}
+
+.btn:hover .bi-plus-lg::before {
+  transform: rotate(180deg);
+}

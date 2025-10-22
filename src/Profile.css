@@ -1,0 +1,20 @@
+.profile-image {
+  border: 2px solid white;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  box-shadow: 0 0 11px 1px rgb(195 195 195);
+}
+
+.profile-image.profile-animation {
+  animation: bob var(--duration, 0.3s) ease;
+}
+
+@keyframes bob {
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(-6px); }
+  70%  { transform: translateY(3px); }
+  100% { transform: translateY(0); }
+}

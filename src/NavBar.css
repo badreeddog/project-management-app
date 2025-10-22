@@ -1,0 +1,44 @@
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.pill-nav {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--count), 1fr);
+  justify-items: center;
+  border-radius: 2rem;
+  background-color: #343434f7;
+  z-index: 1;
+
+  .pill-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% / var(--count));
+    height: 100%;
+    background-color: white;
+    border-radius: inherit;
+    transform: translateX(calc(100% * var(--i)));
+    transition: transform 0.3s ease;
+  }
+}
+
+.nav-item {
+  padding: .5rem 2rem;
+  cursor: pointer;
+  color: #ffffffba;
+  transition: all .3s ease;
+  z-index: 2;
+
+  &.active {
+    color: black;
+  }
+
+  &:not(.active):hover {
+    color: white;
+    text-shadow: 0 0 2px #ffffff56;
+  }
+}
