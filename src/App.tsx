@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./NavBar";
 import { Button } from "react-bootstrap";
 import Profile from "./Profile";
+import Home from "./Home";
 
 function App() {
 
@@ -18,12 +19,7 @@ function App() {
       </div>
       <section className="content-section">
         <div className="page-content">
-          <div className="d-flex justify-content-between align-items-center">
-            <h1>{activePage}</h1>
-            <Button variant="light" className="rounded-circle">
-              <i className="bi bi-plus-lg" />
-            </Button>
-          </div>
+          <Home />
         </div>
       </section>
     </div>

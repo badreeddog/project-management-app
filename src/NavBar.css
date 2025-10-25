@@ -10,7 +10,7 @@ ul {
   grid-template-columns: repeat(var(--count), 1fr);
   justify-items: center;
   border-radius: 2rem;
-  background-color: #343434f7;
+  background-color: #343434c2;
   z-index: 1;
 
   .pill-slider {
