@@ -17,30 +17,42 @@
 }
 
 .swim-board {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1rem; 
+  /* 1) One-row, column-flow grid */
+  display: grid;
+  grid-auto-flow: column;                      /* lay out columns left→right */
+  grid-auto-columns: clamp(220px, 24vw, 280px);/* responsive lane width */
+  gap: 1rem;
   margin-top: 3rem;
   padding: .5rem 0;
 
+  /* 2) Horizontal scroll with snap */
   overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* optional smooth snap between positions */
   scrollbar-width: thin;
   scrollbar-color: #696969 transparent;
 }
 
 .swim-lane {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: white;          
-  color: black;               
+  scroll-snap-align: start;     /* each lane snaps to the left edge */
+  background: white;
+  color: black;
   border-radius: 20px;
   padding: .5rem 1rem;
-  flex: 1;
-  min-width: 150px;
-  max-width: 275px;
 
-  h6 {
-    margin: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;            /* tweak as needed */
+
+  /* let cards area scroll vertically if tall */
+  /* optional: create an inner wrapper for cards if you want sticky headers */
+}
+
+.swim-lane h6 {
+  margin: 0 0 .5rem 0;
+  position: sticky;             /* optional: keep titles visible while scrolling lane */
+  top: 0;
+  background: white;            /* match lane bg so it doesn’t flicker */
+  padding-top: .25rem;
 }
