@@ -5,22 +5,22 @@
   font-family: "BBH Sans Bartle", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.bi-plus-lg::before {
-  transform: rotate(0deg);
-  transition: transform 0.3s ease-out;
-}
-
-.btn:hover .bi-plus-lg::before {
-  transform: rotate(180deg);
+  
+  .bi-plus-lg::before {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .btn:hover .bi-plus-lg::before {
+    transform: rotate(180deg);
+  }
 }
 
 .swim-board {
   display: grid;
   grid-auto-flow: column;      
-  grid-auto-columns: clamp(220px, 24vw, 280px);
-  gap: 1rem;
+  grid-auto-columns: clamp(250px, 20vw, 425px);
+  gap: .75rem;
   margin-top: 3rem;
   padding: .5rem 0;
 
@@ -30,24 +30,4 @@
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #696969 transparent;
-}
-
-.swim-lane {
-  scroll-snap-align: start;   
-  background: white;
-  color: black;
-  border-radius: 20px;
-  padding: .5rem 1rem;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 280px; 
-}
-
-.swim-lane h6 {
-  margin: 0 0 .5rem 0;
-  position: sticky;
-  top: 0;
-  background: white;
-  padding-top: .25rem;
 }
