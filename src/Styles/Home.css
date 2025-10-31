@@ -20,7 +20,7 @@
   display: grid;
   grid-auto-flow: column;      
   grid-auto-columns: clamp(250px, 20vw, 425px);
-  gap: .75rem;
+  gap: 1rem;
   margin-top: 3rem;
   padding: .5rem 0;
 

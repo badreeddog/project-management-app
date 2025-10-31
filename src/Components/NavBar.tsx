@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NavBar.css";
+import "../Styles/NavBar.css";
 
 function NavBar({ navItems, defaultItemIndex = 1, activePage }: { navItems: string[], defaultItemIndex?: number, activePage: (pageName: string) => void }) {
 

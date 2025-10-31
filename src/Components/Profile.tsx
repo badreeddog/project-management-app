@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Image } from "react-bootstrap";
-import "./Profile.css";
+import "../Styles/Profile.css";
 
 function Profile() {
   const [clicked, setClicked] = useState(false);

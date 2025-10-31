@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import "./SwimLane.css";
+import "../Styles/SwimLane.css";
 
 function SwimLane({ laneName }: { laneName: string }) {
 

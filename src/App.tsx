@@ -1,12 +1,10 @@
 import { useState } from "react";
-import "./App.css";
-import NavBar from "./NavBar";
-import { Button } from "react-bootstrap";
-import Profile from "./Profile";
-import Home from "./Home";
+import NavBar from "./Components/NavBar";
+import Profile from "./Components/Profile";
+import Home from "./Components/Home";
+import "./Styles/App.css";
 
 function App() {
-
   const [activePage, setActivePage] = useState("Home");
 
   return (

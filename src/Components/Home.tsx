@@ -1,7 +1,7 @@
-import "./Home.css";
 import { Button } from "react-bootstrap";
 import SwimLane from "./SwimLane";
 import { useState } from "react";
+import "../Styles/Home.css";
 
 function Home() {
     const [lanes, setLanes] = useState(["To Do", "In Progress", "Done"]);
